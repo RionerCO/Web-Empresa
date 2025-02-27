@@ -1,0 +1,633 @@
+/* Fuentes */
+@font-face {
+    font-family: rionerPalabra;
+    src: url(Fonts/Akira\ Expanded\ Demo.otf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #006E7C;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Padding reducido */
+    background-color: #006E7C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+header img {
+    height: 50px; /* Logo más pequeño */
+    transition: height 0.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio reducido entre enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    transition: font-size 0.5s ease-in-out, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Header achicado */
+header.achicado {
+    padding: 5px 20px; /* Padding reducido */
+}
+
+header.achicado img {
+    height: 40px; /* Logo más pequeño */
+}
+
+header.achicado nav ul li a {
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
+
+/* Responsive para el header */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 10px; /* Padding reducido */
+    }
+
+    header img {
+        height: 40px; /* Logo más pequeño */
+    }
+
+    nav ul {
+        gap: 10px; /* Espacio reducido entre enlaces */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Tamaño de fuente reducido */
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #006E7C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+    height: 70px; /* Altura fija para el header */
+}
+
+/* Sección RIONER */
+.rioner {
+    background: #273f43;
+    color: white;
+    text-align: left;
+    padding: 120px 20px 40px 20px; /* Padding superior aumentado */
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: auto;
+    margin-top: 90px; /* Margen superior aumentado */
+    overflow: hidden; /* Evita que la imagen de fondo se desborde */
+}
+
+.rionerYsoluciones {
+    margin-left: 5%;
+    max-width: 800px;
+    width: 100%;
+    position: relative; /* Aseguramos que el contenido esté por encima de la imagen de fondo */
+    z-index: 1; /* Aseguramos que el contenido esté por encima de la imagen de fondo */
+}
+
+.rioner h2 {
+    color: #006e7e;
+    font-weight: 800;
+    font-size: 100px; /* Tamaño de fuente más grande */
+    text-align: left;
+    margin-top: -30px; /* Margen superior ajustado */
+    margin-bottom: 10px; /* Margen inferior reducido */
+    font-family: rionerPalabra;
+}
+
+.rioner h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 90px; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0; /* Margen superior eliminado */
+    line-height: 1; /* Espaciado entre líneas ajustado */
+}
+
+.rioner p {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    margin-top: 10px; /* Margen superior reducido */
+    text-align: left;
+    font-weight: bold;
+}
+
+.rioner::before {
+    content: "";
+    position: absolute;
+    top: 70%; /* Ajustamos la posición vertical (más abajo) */
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: url("imagenes/logoFondo.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.1;
+    transform: translate(-50%, -50%);
+    margin-top: -20px;
+    z-index: 0; /* Asegura que la imagen de fondo esté detrás del contenido */
+}
+
+/* Responsive para la sección RIONER */
+@media (max-width: 1200px) {
+    .rioner {
+        padding: 110px 20px 30px 20px; /* Padding ajustado */
+        margin-top: 80px; /* Margen superior ajustado */
+    }
+
+    .rioner h2 {
+        font-size: 80px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner h1 {
+        font-size: 70px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner p {
+        font-size: 20px;
+    }
+
+    .rioner::before {
+        width: 500px;
+        height: 500px;
+        right: -15%;
+        top: 70%; /* Mantenemos la posición vertical */
+    }
+}
+
+@media (max-width: 992px) {
+    .rioner {
+        padding: 100px 20px 20px 20px; /* Padding ajustado */
+        margin-top: 70px; /* Margen superior ajustado */
+    }
+
+    .rioner h2 {
+        font-size: 60px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner h1 {
+        font-size: 50px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner p {
+        font-size: 18px;
+    }
+
+    .rioner::before {
+        width: 400px;
+        height: 400px;
+        right: -20%;
+        top: 70%; /* Mantenemos la posición vertical */
+    }
+}
+
+@media (max-width: 768px) {
+    .rioner {
+        padding: 90px 20px 15px 20px; /* Padding ajustado */
+        margin-top: 60px; /* Margen superior ajustado */
+    }
+
+    .rioner h2 {
+        font-size: 50px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner h1 {
+        font-size: 40px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner p {
+        font-size: 16px;
+    }
+
+    .rioner::before {
+        width: 300px;
+        height: 300px;
+        right: -25%;
+        top: 70%; /* Mantenemos la posición vertical */
+    }
+}
+
+@media (max-width: 576px) {
+    .rioner {
+        padding: 80px 20px 10px 20px; /* Padding ajustado */
+        margin-top: 50px; /* Margen superior ajustado */
+    }
+
+    .rioner h2 {
+        font-size: 40px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner h1 {
+        font-size: 30px; /* Tamaño de fuente ajustado */
+    }
+
+    .rioner p {
+        font-size: 14px;
+    }
+
+    .rioner::before {
+        width: 200px;
+        height: 200px;
+        right: -30%;
+        top: 70%; /* Mantenemos la posición vertical */
+    }
+}
+
+/* Estilos para el efecto de cambio de palabras */
+#cambiarPalabra {
+    display: inline-block;
+    position: relative;
+    color: #006e7e; /* Color azul de la paleta de RIONER */
+    font-weight: bold;
+}
+
+#cambiarPalabra::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #006e7e; /* Color del cursor */
+    animation: blink 0.75s infinite; /* Animación de parpadeo */
+}
+
+/* Animación de parpadeo del cursor */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Sección Nosotros */
+.nosotros {
+    background: linear-gradient(to bottom, #273F43, #006E7C);
+    color: white;
+    padding: 60px 20px; /* Padding reducido */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio reducido */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.nosotros h3 {
+    font-size: 60px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nosotrosInfo {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.nosotrosInfo p {
+    font-size: 20px; /* Tamaño de fuente reducido */
+    line-height: 1.6;
+    margin: 0 0 15px 0; /* Margen inferior reducido */
+}
+
+.filosofia {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px; /* Padding reducido */
+    font-family: montserrat, sans-serif;
+    font-size: 20px; /* Tamaño de fuente reducido */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filosofia::before, .filosofia::after {
+    content: '';
+    position: absolute;
+    width: 40px; /* Tamaño reducido */
+    height: 40px; /* Tamaño reducido */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.filosofia::before {
+    top: 0;
+    left: 0;
+    border-bottom: none;
+    border-right: none;
+}
+
+.filosofia::after {
+    bottom: 0;
+    right: 0;
+    border-top: none;
+    border-left: none;
+}
+
+.filosofia p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.filosofia p:first-child {
+    font-size: 24px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    margin-bottom: 15px; /* Margen inferior reducido */
+    color: #e0e0e0;
+}
+
+.filosofia p:last-child {
+    font-style: italic;
+    color: #c7c1c1;
+    margin-top: 15px; /* Margen superior reducido */
+}
+
+/* Responsive para la sección Nosotros */
+@media (max-width: 992px) {
+    .nosotrosInfo, .filosofia {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .filosofia {
+        margin-top: 20px; /* Espacio entre la información y la filosofía */
+    }
+}
+
+/* Botón "Contáctanos" */
+.boton-seccion {
+    text-align: center; /* Centra el botón en pantallas pequeñas */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.boton-contacto {
+    display: inline-block;
+    padding: 12px 24px; /* Padding reducido */
+    background: linear-gradient(45deg, #006E7C, #00A8CC); /* Gradiente azul */
+    color: white;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover */
+.boton-contacto:hover {
+    background: linear-gradient(45deg, #00A8CC, #ce4141a2); /* Invierte el gradiente */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transform: translateY(-3px); /* Efecto de levitación */
+}
+
+/* Efecto activo (al hacer clic) */
+.boton-contacto:active {
+    transform: translateY(0); /* Vuelve a su posición original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Efecto de onda al hacer clic (opcional) */
+.boton-contacto::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3); /* Color de la onda */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.boton-contacto:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: transform 0s, opacity 0s;
+}
+
+/* Sección ¿Por qué elegirnos? */
+.porque_elegirnos {
+    background-color: #273F43;
+    color: white;
+    padding: 60px 20px; /* Padding reducido */
+    text-align: center;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.porque_elegirnos h3 {
+    font-size: 60px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    margin-bottom: 30px; /* Margen inferior reducido */
+}
+
+#cardsGalery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    justify-items: center; /* Centra las cards */
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Ancho máximo */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #006E7C;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Sección Servicios */
+.servicios {
+    background-color: #006E7C;
+    color: white;
+    padding: 60px 20px; /* Padding reducido */
+    text-align: center;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.servicios h3 {
+    font-size: 60px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    margin-bottom: 30px; /* Margen inferior reducido */
+}
+
+/* Footer */
+.footer {
+    background-color: #273F43;
+    color: #FFFFFF;
+    padding: 30px 20px 10px 20px; /* Padding reducido */
+    border-top: 2px solid #006E7C;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-columna {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-columna h5 {
+    font-size: 16px; /* Tamaño de fuente reducido */
+    margin-bottom: 10px; /* Margen inferior reducido */
+    color: #FFFFFF;
+}
+
+.footer-contacto li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Margen inferior reducido */
+}
+
+.footer-contacto img {
+    width: 16px; /* Tamaño reducido */
+    height: 16px; /* Tamaño reducido */
+    margin-right: 8px; /* Margen derecho reducido */
+}
+
+.footer-contacto p {
+    font-size: 12px; /* Tamaño de fuente reducido */
+    color: #E0E0E0;
+    margin: 0;
+}
+
+.footer-enlaces li {
+    margin-bottom: 8px; /* Margen inferior reducido */
+}
+
+.footer-enlaces a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 12px; /* Tamaño de fuente reducido */
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: #006E7C;
+}
+
+.footer-derechos {
+    text-align: center;
+    padding-top: 10px; /* Padding superior reducido */
+}
+
+.footer-derechos p {
+    font-size: 10px; /* Tamaño de fuente reducido */
+    color: #B0B0B0;
+    margin: 0;
+}
+
+/* Personalización del scroll */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho del scroll */
+}
+
+::-webkit-scrollbar-track {
+    background: #273F43; /* Color de fondo del track */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006E7C; /* Color del thumb (la barra del scroll) */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #005f6b; /* Color del thumb al pasar el mouse */
+}
