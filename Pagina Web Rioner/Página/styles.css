@@ -26,26 +26,29 @@ body {
     color: white;
 }
 
-/* Header */
+/* Header principal */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Padding reducido */
+    height: 70px; /* Establece altura fija */
+    padding: 0 20px; /* Evita que el padding cambie la altura */
     background-color: #006E7C;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: all 0.5s ease-in-out;
-    box-sizing: border-box; /* Incluye padding en el ancho */
+    transition: height 0.5s ease-in-out, background-color 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
+/* Logo normal */
 header img {
-    height: 50px; /* Logo más pequeño */
+    height: 50px;
     transition: height 0.5s ease-in-out;
 }
+
 
 nav ul {
     list-style: none;
@@ -63,17 +66,19 @@ nav ul li a {
     transition: font-size 0.5s ease-in-out, color 0.3s ease;
 }
 
+
 nav ul li a:hover {
     color: #3498db;
 }
 
-/* Header achicado */
+/* Cuando se achica */
 header.achicado {
-    padding: 5px 20px; /* Padding reducido */
+    height: 60px; /* En lugar de cambiar padding, ajustamos solo la altura */
 }
 
+/* Logo más pequeño cuando se achica */
 header.achicado img {
-    height: 40px; /* Logo más pequeño */
+    height: 40px;
 }
 
 header.achicado nav ul li a {
@@ -97,23 +102,6 @@ header.achicado nav ul li a {
     nav ul li a {
         font-size: 14px; /* Tamaño de fuente reducido */
     }
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #006E7C;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.5s ease-in-out;
-    box-sizing: border-box;
-    height: 70px; /* Altura fija para el header */
 }
 
 /* Sección RIONER */
@@ -178,7 +166,7 @@ header {
     background-size: contain;
     opacity: 0.1;
     transform: translate(-50%, -50%);
-    margin-top: -20px;
+    margin-top: -90px;
     z-index: 0; /* Asegura que la imagen de fondo esté detrás del contenido */
 }
 
@@ -419,8 +407,9 @@ header {
 
 /* Botón "Contáctanos" */
 .boton-seccion {
+    font-size: 30px;
     text-align: center; /* Centra el botón en pantallas pequeñas */
-    margin-top: 20px; /* Espacio superior */
+    margin-top: -40px; /* Espacio superior */
 }
 
 .boton-contacto {
