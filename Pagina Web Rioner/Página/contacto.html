@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="stylesContactos.css">
 </head>
 <body>
-
-    <header>
+    <header class="header">
         <a href="index.html"><img src="imagenes/logo.png" alt="logo rioner"></a>
         <nav>
             <ul>
@@ -19,35 +18,52 @@
             </ul>
         </nav>
     </header>
-
-    <div class="form-container">
+    <header class="hero">
         <h2>CONTACTANOS</h2>
-        <form>
-            <div class="input-group">
-                <div class="input-box">
-                    <label>NOMBRE</label>
-                    <input type="text" required>
-                </div>
-                <div class="input-box">
-                    <label>APELLIDO</label>
-                    <input type="text" required>
-                </div>
+        <p>Juntos podemos crear el futuro. Envíanos un mensaje y comencemos a crear algo único.</p>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-form">
+
+            <form
+            action="https://formspree.io/f/xvgkgzow"
+            method="POST"
+            >
+            <label>
+            Nombre:
+            <input type="text" name="nombre" required>
+            </label>
+            <label>
+            Apellido:
+            <input type="text" name="apellido" required>
+            </label>
+            <label>
+            Email:
+            <input type="email" name="email" required>
+            </label>
+            <label>
+            Mensaje:
+            <textarea name="message"></textarea>
+            </label>
+            
+            <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <aside class="contact-info">
+            <div class="social-icons">
+                <span><img src="imagenesLogo/instagram.png" alt="instagram"></span> <span><img src="imagenesLogo/facebook.png" alt="facebook"></span> <span><img src="imagenesLogo/linkedin.png" alt="linkedin"></span>
             </div>
-
-            <div class="input-box">
-                <label>EMAIL</label>
-                <input type="email" required>
-            </div>
-
-            <div class="input-box">
-                <label>MENSAJE</label>
-                <textarea required></textarea>
-            </div>
-
-            <button type="submit">ENVIAR</button>
-        </form>
-        <p class="message">¡Gracias por tu mensaje!</p>
-    </div>
-
+            <p><strong>VISÍTANOS</strong></p>
+            <p>Argentina<br>Entre Ríos, Concepción del Uruguay</p>
+            <a href="https://maps.app.goo.gl/xVwLV9psncieR7dH8" target="_blank">Nuestra dirección »</a>
+            <p><strong>ESCRÍBENOS</strong></p>
+            <p><a href="mailto:rionerco@gmail.com">rionerco@gmail.com</a></p>
+            <p><strong>LLÁMANOS</strong></p>
+            <p>+54 3442 46-4077</p>
+            <p>+54 3442 52-7967</p>
+        </aside>
+    </main>
 </body>
 </html>

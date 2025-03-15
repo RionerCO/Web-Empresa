@@ -572,8 +572,8 @@ header.achicado nav ul li a {
 }
 
 .footer-contacto img{
-    width: 16px; /* Tamaño reducido */
-    height: 16px; /* Tamaño reducido */
+    width: 20px; /* Tamaño reducido */
+    height: 20px; /* Tamaño reducido */
     margin-right: 8px; /* Margen derecho reducido */
 }
 
@@ -615,3 +615,14 @@ header.achicado nav ul li a {
     margin: 0;
 }
 
+
+.mapa {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo del mapa */
+    height: 200px; /* Altura fija para el mapa */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el mapa no se desborde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 20px auto; /* Centra el mapa horizontalmente */
+}
